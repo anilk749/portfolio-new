@@ -88,7 +88,7 @@ const Header = () => {
             {navItems.map(({ title, url }) => (
               <li
                 key={title}
-                className={`transition-all duration-500 hover:text-cyan-600 hover:translate-x-1 hover:scale-110 ${isActive(
+                className={`transition-colors duration-500 ease-in-out hover:text-cyan-600 ${isActive(
                   url
                 )}`}
                 onClick={() => handleNavItemClick(url)}

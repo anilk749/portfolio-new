@@ -57,7 +57,7 @@ const Skills = () => {
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map(({ title, icon }) => (
-            <Card key={title} className="flex justify-center items-center p-3 duration-500 hover:bg-gray-300 hover:scale-105 hover:translate-y-2 hover:ring-cyan-300 hover:ring-2 hover:ring-offset-2">
+            <Card key={title} className="flex justify-center items-center p-3 duration-500 ease-in-out hover:bg-gray-200 hover:scale-105 hover:ring-cyan-300 hover:ring-2">
               {icon}
               <span className="ml-3 text-lg md:text-xl text-gray-500 font-medium">
                 {title}
