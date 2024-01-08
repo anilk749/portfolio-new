@@ -13,6 +13,7 @@ const Header = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  // this will check the current browser theme selected selected by user
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
@@ -20,6 +21,7 @@ const Header = () => {
       setTheme("light");
     }
   }, []);
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -30,7 +32,7 @@ const Header = () => {
 
   const isActive = (url) =>
     activeLink === url.substring(url.indexOf("#"))
-      ? "text-red-600 focus:text-red-600"
+      ? "text-cyan-600 focus:text-cyan-600"
       : "";
 
   const handleNavItemClick = (url) => {
@@ -60,7 +62,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="w-full h-20 p-5 self-center  bg-slate-100 shadow-md dark:bg-neutral-800 dark:shadow-gray-600">
+    <header className="w-full h-20 p-5 self-center bg-neutral-100 shadow-md dark:bg-neutral-800 dark:shadow-gray-600">
       <nav className="max-w-5xl mx-auto flex items-center my-auto ">
         <a href="/" className="transition-all duration-700 hover:scale-110">
           <img
@@ -71,7 +73,7 @@ const Header = () => {
           />
         </a>
         <button
-          className="ms-auto lg:hidden text-3xl"
+          className="ms-auto lg:hidden text-3xl rounded-sm hover:ring focus:ring ring-cyan-500 dark:text-white"
           onClick={() => setNavToggle(!navToggle)}
         >
           <MdMenu />
@@ -79,10 +81,10 @@ const Header = () => {
         <div
           id="navbar-default"
           className={`ms-auto ${
-            navToggle ? "block absolute top-16 start-0 " : "hidden"
-          } w-full lg:w-auto lg:block`}
+            navToggle ? "block absolute top-20 start-0" : "hidden"
+          } w-full lg:block lg:w-auto`}
         >
-          <ul className="flex flex-col gap-4 p-4 text-gray-800 bg-gray-300 list-none font-medium lg:flex-row lg:p-0 lg:gap-8 lg:bg-inherit lg:text-lg dark:text-white">
+          <ul className="flex flex-col gap-4 p-4 text-gray-800 bg-neutral-200 list-none font-medium lg:flex-row lg:p-0 lg:gap-8 lg:bg-inherit lg:text-lg dark:text-white dark:bg-neutral-800 dark:shadow-inner dark:lg:shadow-none dark:shadow-neutral-900">
             {navItems.map(({ title, url }) => (
               <li
                 key={title}

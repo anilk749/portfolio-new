@@ -15,7 +15,7 @@ function App() {
   return (
     <>
      <Header/>
-     <main className=''>
+     <main>
         <Hero/>
         <About/>
         <Skills/>
