@@ -59,7 +59,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.9 }}
                     viewport={{ once: true }}
-                    className="text-3xl text-cyan-900 font-semibold text-center mb-10 md:text-5xl dark:text-cyan-600"
+                    className="text-3xl text-cyan-900 font-semibold text-center mb-8 md:text-5xl dark:text-cyan-600"
                 >
                     Skills
                 </motion.h2>
@@ -79,7 +79,7 @@ const Skills = () => {
                             })}
                             viewport={{ once: true }}
                         >
-                            <Card className="flex justify-center items-center p-4 md:p-5 duration-500 ease-in-out hover:shadow-xl hover:-translate-y-1">
+                            <Card className="flex justify-center items-center p-6 md:p-8 rounded-xl duration-500 ease-in-out shadow-neutral-500/40 hover:shadow-xl hover:-translate-y-1">
                                 {icon}
                                 <span className="ml-3 text-lg md:text-xl text-gray-500 font-medium">
                                     {title}

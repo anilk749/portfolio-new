@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion, useScroll } from "framer-motion";
-import AboutImg from "../assets/about-me-img.jpg";
+import WorkImg from "../assets/work-img.jpg";
 const About = () => {
     const { scrollYProgress } = useScroll();
     return (
@@ -20,17 +20,18 @@ const About = () => {
                     About Me
                 </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-10 overflow-hidden">
                     <motion.div
                         initial={{ opacity: 0, x: -80 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
+                        className="lg:col-span-1"
                     >
                         <img
-                            src={AboutImg}
+                            src={WorkImg}
                             alt="A laptop image"
-                            className="w-64 h-64 md:w-80 mx-auto md:h-80 object-cover self-center duration-300 rounded-tl-3xl rounded-br-3xl hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl"
+                            className="w-4/5 h-56 sm:w-3/4 sm:h-72 sm:max-w-lg lg:w-full mx-auto object-cover self-center duration-300 rounded-tl-3xl rounded-br-3xl hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-3xl hover:rounded-bl-3xl"
                         />
                     </motion.div>
                     <motion.p
@@ -38,9 +39,9 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="md:col-span-2 text-base sm:text-lg text-gray-700 text-pretty self-center overflow-hidden dark:text-gray-100"
+                        className="lg:col-span-2 text-base sm:text-lg text-gray-700 text-center md:text-left overflow-hidden dark:text-gray-100"
                     >
-                        I&apos;m a Frontend Developer based in Chandigarh who is
+                        I&apos;m a Frontend Developer currently living in Chandigarh who is
                         passionate about delivering value to businesses through
                         technology. I love the challenge of finding creative
                         solutions to problems, and I enjoy collaborating with

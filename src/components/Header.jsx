@@ -145,7 +145,7 @@ const Header = () => {
                 <AnimatePresence>
                     {navToggle && (
                         <motion.div
-                            initial={{ width: 0 }}
+                            initial={{ width: 0, height: "100vh" }}
                             animate={{
                                 position: "fixed",
                                 top: 0,
@@ -160,7 +160,7 @@ const Header = () => {
                             className={`shadow-inner shadow-black/30 dark:shadow-cyan-50/20 bg-neutral-300 dark:bg-neutral-800`}
                         >
                             <MdClose
-                                className="mx-auto mt-4 mb-2 text-3xl rounded-md hover:ring focus:ring ring-cyan-500 dark:text-white"
+                                className="mx-auto mt-6 mb-2 text-3xl rounded-md hover:ring focus:ring ring-cyan-500 dark:text-white"
                                 onClick={() => setNavToggle(!navToggle)}
                             />
                             <motion.ul
@@ -168,13 +168,13 @@ const Header = () => {
                                 animate="open"
                                 variants={ulVariants}
                                 exit="closed"
-                                className={` p-4 text-gray-800 list-none font-medium dark:text-white `}
+                                className={`flex flex-col gap-5 p-4 text-gray-800 list-none font-medium dark:text-white `}
                             >
                                 {navItems.map(({ title, url }) => (
                                     <motion.li
                                         variants={liVariants}
                                         key={title}
-                                        className={`w-full mb-4 text-center transition-colors duration-500 ease-in-out hover:text-cyan-600 ${isActive(
+                                        className={`w-full text-center transition-colors duration-500 ease-in-out hover:text-cyan-600 ${isActive(
                                             url
                                         )}`}
                                         onClick={() => handleNavItemClick(url)}
