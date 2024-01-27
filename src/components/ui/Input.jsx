@@ -3,8 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Input = React.forwardRef(function Input(
-  { type = "text", delay = 0, className = "", onChange=()=>{}, ...props },
-  ref
+  { type = "text", delay = 0, className = "", onChange = () => {}, ...props },
+  ref,
 ) {
   return (
     <motion.input

@@ -81,7 +81,7 @@ const Skills = () => {
                         >
                             <Card className="flex justify-center items-center p-6 md:p-8 rounded-xl duration-500 ease-in-out shadow-neutral-500/40 hover:shadow-xl hover:-translate-y-1">
                                 {icon}
-                                <span className="ml-3 text-lg md:text-xl text-gray-500 font-medium">
+                                <span className="ml-3 text-lg md:text-xl text-gray-600 font-medium">
                                     {title}
                                 </span>
                             </Card>

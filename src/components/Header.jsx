@@ -109,7 +109,7 @@ const Header = () => {
     ];
     return (
         <header
-            className={`w-full fixed z-40 top-0 left-0 bg-neutral-100 shadow-md dark:bg-neutral-800 dark:shadow-gray-600 duration-500 ${
+            className={`w-full fixed z-40 top-0 left-0 bg-neutral-200 shadow-md dark:bg-slate-800 dark:shadow-gray-600 duration-500 ${
                 scrolling ? "h-12 md:h-16" : "h-14 md:h-20"
             }`}
         >
@@ -157,7 +157,7 @@ const Header = () => {
                                 width: 0,
                                 transition: { delay: 0.3, duration: 0.9 },
                             }}
-                            className={`shadow-inner shadow-black/30 dark:shadow-cyan-50/20 bg-neutral-300 dark:bg-neutral-800`}
+                            className={`shadow-inner shadow-black/30 dark:shadow-cyan-50/20 bg-neutral-300 dark:bg-slate-900`}
                         >
                             <MdClose
                                 className="mx-auto mt-6 mb-2 text-3xl rounded-md hover:ring focus:ring ring-cyan-500 dark:text-white"
@@ -181,7 +181,7 @@ const Header = () => {
                                     >
                                         <a
                                             href={url}
-                                            className="w-full inline-block capitalize"
+                                            className="w-full inline-block text-xl font-medium capitalize"
                                         >
                                             {title}
                                         </a>
